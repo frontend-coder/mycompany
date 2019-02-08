@@ -1,0 +1,258 @@
+@import '_var.scss';
+
+.header_img {
+ background: #000 url('../images/header-fon_655.jpg') center center no-repeat;
+ min-height:655px;
+ background-size: cover;
+ position: relative;
+}
+.header_img:before {
+position: absolute;
+content: "";
+background: transparent url('../images/septik-ergobox.png') center center no-repeat;
+width: 695px;
+height: 565px;
+bottom: -8%;
+left: 4%;
+ z-index: 10;
+}
+
+.top_line {
+  background-color: $white_color;
+  height: 100px;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+    box-shadow: 1px 1px 1px #95989A;
+}
+
+.top_line_box {
+  display: flex;
+  height: 100px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.top_line_logo {
+  color: #fff;
+}
+
+.top_line_menu {
+  padding: 0;
+  margin: 0;
+}
+.top_line_menu ul li {
+  display: inline-block;
+}
+.top_line_menu ul li a {
+    font-family: "RobotoMedium", sans-serif;
+  display: block;
+  text-transform: uppercase;
+  color: #000;
+ padding: 10px;
+ @include font-size(20px);
+  line-height:(24px / 20px);
+  @include trans;
+
+}
+
+.top_line_menu ul li a:hover {
+color: $color_button;
+}
+.top_line_phone ul li {
+  margin-bottom: 2px;
+font-size: 0.9rem;
+  font-weight: 600;
+
+}
+.top_line_phone ul li:nth-child(2) {
+  margin-bottom: 5px;
+}
+.top_line_phone ul li a {
+  color:$color_button;
+  @include trans;
+   @include font-size(24px);
+ /*   font-weight: 600; */
+}
+
+.top_line_phone ul li a:hover {
+  color:$color_hoverbutton;
+}
+/*  оформление мобильной версии меню и гамбургера */
+.mobile_gamburger {
+  display: none;
+}
+
+.mobile_gamburger {
+  width: 50px;
+  height: 50px;
+  display: none;
+  z-index: 100;
+}
+
+.toggle-mnu {
+  display: block;
+/*   float:right;
+position:absolute;
+right:10px;top:0; */
+text-align:center;
+line-height:48px;
+}
+.toggle-mnu{
+  display:block;
+  width:50px;
+  height:50px;
+  margin-top:15px;
+  margin-right: 0;
+}
+.toggle-mnu span:after, .toggle-mnu span:before {
+content:"";
+position:absolute;
+left:0;
+top:9px;
+}
+.toggle-mnu span:after {
+  top:18px;
+}
+.toggle-mnu span{
+  position:relative;
+  display:block;
+}
+.toggle-mnu span,.toggle-mnu span:after,.toggle-mnu span:before {
+  width:100%;
+  height:3px;
+  background-color:#000;
+  transition:all .3s;
+  backface-visibility:hidden;
+  border-radius:3px;
+}
+.toggle-mnu.on span {
+  background-color:transparent;
+}
+.toggle-mnu.on span:before {
+  -webkit-transform:rotate(45deg) translate(-1px,0);
+  -ms-transform:rotate(45deg) translate(-1px,0);
+  transform:rotate(45deg) translate(-1px,0);
+}
+.toggle-mnu.on span:after {
+  -webkit-transform:rotate(-45deg) translate(6px,-7px);
+  -ms-transform:rotate(-45deg) translate(6px,-7px);
+  transform:rotate(-45deg) translate(6px,-7px);
+}
+
+.toggle-mnu.on+#menu {
+  opacity:1;visibility:visible;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+стили оформления контента в хедере
+*/
+.header_content {
+  padding: 15% 0;
+}
+
+.header_content_item {
+  width: 70%;
+  margin:0;
+  float: left;
+}
+
+.header_content_item:last-child {
+  width: 30%;
+}
+
+.header_cover {
+   background-color: rgba(255, 137, 65, 0.75);
+  padding-top: 15px;
+  padding-bottom: 45px;
+  padding-left: 10px;
+  position: relative;
+  clip-path: polygon(0 0, 83% 0, 100% 100%, 0 100%);
+
+}
+
+.header_title h1 {
+ @include font-size(70px);
+ font-weight: 100;
+ text-transform: uppercase;
+ color: #fff;
+ line-height: 1;
+ font-family: "RobotoRegular", sans-serif;
+ text-shadow: 1px 1px 1px #95989A;
+
+}
+.header_title h1 span {
+  display: block;
+  @include font-size(45px);
+  font-family: "RobotoRegular", sans-serif;
+  font-weight: normal;
+  text-transform: none;
+}
+
+.header_descr {
+  margin-top: 10px;
+  color: #000;
+  @include font-size(25px);
+}
+.header_descr span {
+  font-weight: 400;
+  @include font-size(35px);
+  text-transform: uppercase;
+      font-weight: 700;
+}
+.header_termes {
+  margin-top: 10px;
+  @include font-size(12px);
+}
+
+.big_form_box {
+  padding: 0;
+  margin: 0;
+  padding-top: 212px;
+}
+
+.form_fon {
+  background-color: rgba(#000, .7);
+  padding-bottom: 5px;
+  padding-top: 70px;
+  position: relative;
+}
+.form_fon:before {
+  content: '';
+  position: absolute;
+bottom: 71.75%;
+  background: transparent url('../images/women.png') center center no-repeat;
+  width: 293px;
+  height: 302px;
+  margin: 0 auto;
+}
+.top_mnu,
+.hidden-mnu { display: none;}
