@@ -21,9 +21,9 @@ color:#202020;
    padding: 0;
   margin: 0;
 }
+@import '_fonts.scss';
 
 html{
-box-sizing: border-box;
 width: 100%;
 /* height: 100%; */
 font-size: 16px;
@@ -34,9 +34,9 @@ padding:0;
 /* overflow-x: hidden; */
 }
 body {
-font-family: "RobotoRegular", sans-serif;
+font-family: "OpenSansRegular", sans-serif;
 font-size: 16px;
-line-height: 1.42;
+line-height: 1.71;
 position: relative;
 min-width: 320px;
 height: 100%;
@@ -83,11 +83,10 @@ width: 100%;
 	display: none;
 }
 
-@import '_fonts.scss';
 @import '_header.scss';
 @import '_allstyle.scss';
-@import '_basicstyle.scss';
- @import '_vseforms.scss';
+// @import '_basicstyle.scss';
+//  @import '_vseforms.scss';
 
 @import '_media.scss';
 

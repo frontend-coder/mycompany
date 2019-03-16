@@ -1,31 +1,35 @@
 @import '_var.scss';
 
 .header_img {
- background: #000 url('../images/header-fon_655.jpg') center center no-repeat;
- min-height:655px;
+ background: #000 url('../images/header-fon.jpg') center center no-repeat;
+ min-height:770px;
  background-size: cover;
  position: relative;
 }
 .header_img:before {
 position: absolute;
 content: "";
-background: transparent url('../images/septik-ergobox.png') center center no-repeat;
-width: 695px;
-height: 565px;
-bottom: -8%;
-left: 4%;
- z-index: 10;
-}
+background: rgba(#111, 0.5);
+width: 100%;
+height: 100%;
+bottom: 0;
+left: 0;
+
+ }
 
 .top_line {
-  background-color: $white_color;
+  background: rgba(#111, 0.5);
+  background-color: transparent;
+position: relative;
   height: 100px;
-  width: 100%;
-  position: fixed;
-  z-index: 100;
-    box-shadow: 1px 1px 1px #95989A;
-}
 
+  z-index: 100;
+
+}
+.top_line .active {
+   width: 100%;
+  position: fixed;
+}
 .top_line_box {
   display: flex;
   height: 100px;
@@ -34,6 +38,10 @@ left: 4%;
 }
 
 .top_line_logo {
+   @include font-size(24px);
+   line-height: 1;
+   text-transform: uppercase;
+    font-family: "OpenSansSemiBold", sans-serif;
   color: #fff;
 }
 
@@ -43,41 +51,45 @@ left: 4%;
 }
 .top_line_menu ul li {
   display: inline-block;
+  padding: 0 10px;
 }
 .top_line_menu ul li a {
-    font-family: "RobotoMedium", sans-serif;
   display: block;
   text-transform: uppercase;
-  color: #000;
- padding: 10px;
- @include font-size(20px);
-  line-height:(24px / 20px);
+  color: #fff;
+ padding: 10px 0;
+ @include font-size(14px);
+  line-height:(24px / 14px);
   @include trans;
-
+position: relative;
 }
 
 .top_line_menu ul li a:hover {
-color: $color_button;
-}
-.top_line_phone ul li {
-  margin-bottom: 2px;
-font-size: 0.9rem;
-  font-weight: 600;
-
-}
-.top_line_phone ul li:nth-child(2) {
-  margin-bottom: 5px;
-}
-.top_line_phone ul li a {
-  color:$color_button;
-  @include trans;
-   @include font-size(24px);
- /*   font-weight: 600; */
+color: $color_cycle;
 }
 
-.top_line_phone ul li a:hover {
-  color:$color_hoverbutton;
+.top_line_menu ul li a:hover:before {
+position: absolute;
+bottom:0;
+left:0;
+content: '';
+height: 2px;
+width: 100%;
+background-color: $color_cycle;
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
 /*  оформление мобильной версии меню и гамбургера */
 .mobile_gamburger {
   display: none;
@@ -146,23 +158,43 @@ top:9px;
 
 
 
+/*оформление скрытого меню*/
+.hidden-mnu {
+  background-color: rgba(#000, .7);
+  display: none;
+  min-width:100%;
+  position:absolute;
+  left:0;
+  top: 0;
+  z-index:1;
+}
+.hidden-mnu ul {
+  margin: 0;
+  padding: 0;
+}
+.hidden-mnu ul li {
+  display:block;
+  margin: 0;
+  padding: 0;
+}
+.hidden-mnu ul li a{
+  display: block;
+  cursor: pointer;
+  text-align: center;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 1.5;
+  padding:20px 0;
+  color:#fff;
+  @include trans;
+}
 
+.hidden-mnu ul li a:hover{
+  /* background-color:rgba(40, 40, 38, 0.60); */
+  color:$color_button;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 
 
@@ -175,84 +207,40 @@ top:9px;
 /*
 стили оформления контента в хедере
 */
+
+.header_row {
+  display: flex;
+
+align-content: center;
+  align-items: center;
+  justify-content: center;
+  min-height:770px;
+}
 .header_content {
-  padding: 15% 0;
-}
-
-.header_content_item {
-  width: 70%;
-  margin:0;
-  float: left;
-}
-
-.header_content_item:last-child {
-  width: 30%;
-}
-
-.header_cover {
-   background-color: rgba(255, 137, 65, 0.75);
-  padding-top: 15px;
-  padding-bottom: 45px;
-  padding-left: 10px;
+  text-align: center;
+  color:#fff;
   position: relative;
-  clip-path: polygon(0 0, 83% 0, 100% 100%, 0 100%);
-
 }
 
-.header_title h1 {
- @include font-size(70px);
- font-weight: 100;
- text-transform: uppercase;
- color: #fff;
+.header_content h1 {
+  font-family: "OpenSansLight", sans-serif;
+ @include font-size(24px);
  line-height: 1;
- font-family: "RobotoRegular", sans-serif;
- text-shadow: 1px 1px 1px #95989A;
-
+ text-transform: uppercase;
+ margin-bottom: 20px;
 }
-.header_title h1 span {
-  display: block;
-  @include font-size(45px);
-  font-family: "RobotoRegular", sans-serif;
-  font-weight: normal;
-  text-transform: none;
+.header_content h1 span {
+ font-family: "OpenSansBold", sans-serif;
+color:$color_cycle;
 }
 
-.header_descr {
-  margin-top: 10px;
-  color: #000;
-  @include font-size(25px);
+.header_content p {
+ width: 70%;
+ margin: 0 auto;
+ @include font-size(20px);
+  line-height: (24px / 20px);
 }
-.header_descr span {
-  font-weight: 400;
-  @include font-size(35px);
-  text-transform: uppercase;
-      font-weight: 700;
-}
-.header_termes {
-  margin-top: 10px;
-  @include font-size(12px);
-}
+.header_content p span {
+  font-family: "OpenSansBold", sans-serif;
 
-.big_form_box {
-  padding: 0;
-  margin: 0;
-  padding-top: 212px;
-}
-
-.form_fon {
-  background-color: rgba(#000, .7);
-  padding-bottom: 5px;
-  padding-top: 70px;
-  position: relative;
-}
-.form_fon:before {
-  content: '';
-  position: absolute;
-bottom: 71.75%;
-  background: transparent url('../images/women.png') center center no-repeat;
-  width: 293px;
-  height: 302px;
-  margin: 0 auto;
-}
-.top_mnu,
-.hidden-mnu { display: none;}
+ }

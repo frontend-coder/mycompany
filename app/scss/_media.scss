@@ -124,44 +124,6 @@ top: 0;
 
 
 
-/*оформление скрытого меню*/
-.hidden-mnu {
-  background-color: rgba(#000, .7);
-
-  display: none;
-  min-width:100%;
-  position:absolute;
-  left:0;
-  top: 0;
-  z-index:1;
-}
-.hidden-mnu ul {
-  margin: 0;
-  padding: 0;
-}
-.hidden-mnu ul li {
-  display:block;
-  margin: 0;
-  padding: 0;
-}
-.hidden-mnu ul li a{
-  display: block;
-  text-align: center;
-  font-size: 1.6rem;
-  text-transform: uppercase;
-  text-decoration: none;
-  line-height: 1.5;
-  padding:20px 0;
-  color:#fff;
-  @include trans;
-}
-
-.hidden-mnu ul li a:hover{
-  /* background-color:rgba(40, 40, 38, 0.60); */
-  color:$color_button;
-
-}
-
 
 .top_line_box, .top_line {
   height: 80px;

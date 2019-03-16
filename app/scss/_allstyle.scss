@@ -3,63 +3,40 @@
 /* оформление содержимого шаблона, которое находится под
 header */
 .block {
-	padding: 60px 0;
-}
-.cont_title {
-	color: red;
+	padding: 100px 0;
 }
 
-.block_h {
-	height: 300px;
+.about_us_wrap {
+	display: flex;
+	justify-content: space-between;
 }
-
-.grey_block {
-	background-color: grey;
+.about_us_items {
+	width: 40%;
 }
-.blue_block {
-	background-color: blue;
-}
-.Aqua_block {
-	background-color: Aqua;
-
-}
-
-.BlueViolet_block {
-	background-color: BlueViolet;
-
-}
-
-.Chocolate_block {
-	background-color: Chocolate;
-
-
-}
-
-.b_w {
-padding-left: 10px;
-padding-right: 10px;
-}
-
-
-.submit_bb {
-text-transform: uppercase;
-display: block;
-margin: 0 auto;
+.about_us_title_wrap {
 text-align: center;
-background-color: transparent;
-border: 3px solid #fff;
-color:#000;
-margin-bottom: 50px;
-cursor: pointer;
- font-size: 1.4rem;
- padding: 9px 33px;
- box-shadow: 1px 1px 1px #95989A;
- margin-bottom: 10px;
- @include trans;
+}
+.about_us_title {
+
+text-transform: uppercase;
+@include font-size(34px);
+ line-height: 37px / 34px;
+ position: relative;
+ display: inline-block;
+ margin-bottom: 60px;
+}
+.about_us_title_line {
+position: absolute;
+content: '';
+bottom: 0;
+left:0;
+width:100%;
+height: 2px;
+background-color: $color_cycle;
+
 }
 
-.submit_bb:hover {
-box-shadow:none;
- }
-
-
+.about_us_descr {
+	@include font-size(18px);
+ line-height: 25px / 18px;
+}

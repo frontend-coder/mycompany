@@ -109,12 +109,12 @@ gulp.task('css-libs', ['sass'], function () {
 gulp.task('scripts', function () {
  return gulp.src([
 'app/libs/jquery/jquery.min.js',
-// 'app/libs/jquery/jquery-migrate-1.2.1.min.js',
 'app/libs/nicescroll/jquery.nicescroll.min.js',
-'app/libs/jQuery-Mask/jquery.mask.min.js',
 'app/libs/magnific-popup/jquery.magnific-popup.min.js',
 'app/libs/jquery.PageScroll2id/jquery.PageScroll2id.min.js',
 
+
+// 'app/libs/jQuery-Mask/jquery.mask.min.js',
 // 'app/libs/equalHeights/equalHeights.min.js',
 // 'app/libs/animate/animate-css.js',
 // 'app/libs/animate/jquery.waypoints.min.js',
