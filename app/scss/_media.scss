@@ -32,7 +32,16 @@
 
 }
 
-@media only screen and (max-width : 1200px) {
+@media only screen and (max-width : 1280px) {
+/* делать это разрешение */
+.our_team_items {
+        width: 23%;
+}
+.adwice_text {
+        font-size: 1.0rem;
+}
+
+
 
 }
 
@@ -41,11 +50,11 @@
 }
 
 @media screen and (max-width: 1080px) {
-
+/* делать это разрешение */
 }
 /* первое разрешение под казачика */
 @media only screen and (max-width: 1024px) {
-
+/* делать это разрешение */
 
 }
 
@@ -60,6 +69,9 @@
 }
 
 @media only screen and (max-width: 768px) {
+/* делать это разрешение */
+
+
 .mobile_gamburger {
   display: block;
 }
@@ -189,7 +201,7 @@ top: 0;
 }
 
 @media only screen and (max-width: 600px) {
-
+/* делать это разрешение */
 
 
 }
@@ -201,7 +213,7 @@ top: 0;
 }
 
 @media only screen and (max-width: 480px) {
-
+/* делать это разрешение */
 
 
 }

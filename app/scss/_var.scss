@@ -1,6 +1,10 @@
 /* // задать все переменные
  */
 
+// @include font-face(OpenSansBold, sans-serif, null, 25, 18);
+ //                       название      стиль    font-weght, база, размер шрифта
+// @include fontsize-lineheight(24, 16); расчет сразу и font-size и line-height
+// @include lineheight(24, 16);  база для расчета и шрифт line-height
 /* p {
   @include font-size(20px);
  } */
@@ -26,19 +30,16 @@ $color_font_list:#5a5a5a;
 
 
 
-
-
-
-
-
-
-
 $color_form: #202020;
 
 $white_color: #fff;
 $color_button: #FF8941;
 $color_hoverbutton: #FB6C14;
 $grey_color: #95989A;
+
+
+
+// @include font-face(OpenSansLight, 400);
 
 
 
@@ -63,10 +64,48 @@ transition: all 0.2s ease;
   font-size: calculateRem($size);
 }
 
-
 @function pxrem($px, $context:16px) {
   @return ($px / $context) * 1rem;
 }
+
+
+@mixin transition($property, $duration, $timing, $delay:null) {
+-moz-transition: $property $duration $timing $delay;
+-webkit-transition: $property $duration $timing $delay;
+transition: $property $duration $timing $delay;
+}
+// @include transition(all, 0.2s, ease);
+ //                   свойство время анимация
+
+
+@mixin font-face($name, $sanserif, $weight: null, $linebase: null, $fontsize:null) {
+    font-family: quote($name), $sanserif;
+    font-weight: $weight;
+    line-height: ($linebase / $fontsize );
+    $rsize: $fontsize / 16;
+  font-size: $rsize * 1rem;
+}
+ // @include font-face(OpenSansBold, sans-serif, null, 25, 18);
+ //                       название      стиль    font-weght, база, размер шрифта
+
+@mixin fontsize-lineheight($lineheight, $fsize) {
+line-height: $lineheight / $fsize;
+$rembase: $fsize / 16;
+font-size: $rembase * 1rem;
+}
+// @include fontsize-lineheight(24, 16); расчет сразу и font-size и line-height
+// @include lineheight(24, 16);  база для расчета и шрифт
+@mixin lineheight($lineheight, $fsize) {
+line-height: $lineheight / $fsize;
+}
+
+// @include font-face(OpenSansBold, sans-serif, null, 25, 18);
+ //                       название      стиль    font-weght, база, размер шрифта
+// @include fontsize-lineheight(24, 16); расчет сразу и font-size и line-height
+// @include lineheight(24, 16);  база для расчета и шрифт line-height
+
+
+
 
 
 /* если ширина контейнеров в % а отступы в пикселях

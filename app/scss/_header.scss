@@ -22,13 +22,15 @@ left: 0;
   background-color: transparent;
 position: relative;
   height: 100px;
-
+ @include transition(all, 0.1s, ease);
   z-index: 100;
 
 }
-.top_line .active {
+.active {
+   background: rgba(#111, 1.0);
    width: 100%;
   position: fixed;
+  @include transition(all, 1.5s, ease);
 }
 .top_line_box {
   display: flex;
@@ -76,11 +78,19 @@ content: '';
 height: 2px;
 width: 100%;
 background-color: $color_cycle;
-
-
+animation: clipMe 0.75s linear;
 }
 
 
+@keyframes clipMe {
+0% {
+   width:0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
 
 
 
