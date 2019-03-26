@@ -1,7 +1,6 @@
-@import '_var.scss';
 
 .header_img {
- background: #000 url('../images/header-fon.jpg') center center no-repeat;
+ background: #000 url('/img/header-fon.jpg') center center no-repeat;
  min-height:770px;
  background-size: cover;
  position: relative;
@@ -18,19 +17,20 @@ left: 0;
  }
 
 .top_line {
-  background: rgba(#111, 0.5);
-  background-color: transparent;
-position: relative;
-  height: 100px;
- @include transition(all, 0.1s, ease);
-  z-index: 100;
+ background-color: transparent;
+ position: relative;
+width: 100%;
+ height: 100px;
+ @include transition(background-color, 0.8s, ease, 0.1s);
+ z-index: 100;
 
 }
 .active {
-   background: rgba(#111, 1.0);
+   background-color: rgba(#111, 1.0);
    width: 100%;
+    height: 70px;
+ @include transition(background-color, 0.8s, ease, 0.1s);
   position: fixed;
-  @include transition(all, 1.5s, ease);
 }
 .top_line_box {
   display: flex;
@@ -38,7 +38,9 @@ position: relative;
   align-items: center;
   justify-content: space-between;
 }
-
+.top_line_box_active {
+  height: 70px;
+}
 .top_line_logo {
    @include font-size(24px);
    line-height: 1;
@@ -254,3 +256,4 @@ color:$color_cycle;
   font-family: "OpenSansBold", sans-serif;
 
  }
+

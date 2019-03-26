@@ -1,4 +1,3 @@
-
 ## HTML шаблон MyCompany
 
 Средний по сложностьи HTML-шаблон сверстан по одноименному PSD-макету. Он состоит из 9-ти простых блоков. К сожалению, во многих блоках не размещены изображения-заглушки. поэтому верстальщик обязан искать их в интернете или обрататься к потенциальному заказчику для уточнения деталей наполнения шаблона
@@ -19,10 +18,11 @@
 
 ## Связаться по вопросам создания сайта под ключ:
 
-* [facebook](https://www.facebook.com/frontendercode)
-* [github](https://github.com/frontend-coder)
-* [skype:webrabcom](href="skype:webrabcom")
-* [telegram](https://t.me/frontendcoder)
+- [facebook](https://www.facebook.com/frontendercode)
+- [github](https://github.com/frontend-coder)
+- [skype:webrabcom](href="skype:webrabcom")
+- [telegram](https://t.me/frontendcoder)
 
 ## Портфолио
-* [Портфолио](https://frontend-coder.github.io)
+
+- [Портфолио](https://frontend-coder.github.io)

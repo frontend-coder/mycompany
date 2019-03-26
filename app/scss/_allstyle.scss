@@ -17,10 +17,10 @@ header */
 	text-align: center;
 }
 .about_us_title {
-
 	text-transform: uppercase;
 	@include font-size(34px);
-	line-height: 37px / 34px;
+	line-height: (37px / 34px);
+	font-weight: 200;
 	position: relative;
 	display: inline-block;
 	margin-bottom: 60px;
@@ -38,7 +38,7 @@ header */
 
 .about_us_descr {
 	@include font-size(18px);
-	line-height: 25px / 18px;
+	line-height: (25px / 18px);
 }
 .our_team_fon {
 	background-color: #070707;
@@ -199,8 +199,25 @@ h3.adwice_name span {
 #our_adwice .owl-theme .owl-dots .active {
 	background: darken($color_cycle, 10%);
 }
-
-
+.mfp-arrow-left:before,
+.mfp-arrow-left:after,
+.mfp-arrow-right:after,
+.mfp-arrow-right:before {
+	border: 0;
+	border-right: 0;
+	border-left:0;
+}
+.mfp-arrow-right:after,
+.mfp-arrow-left:before {
+	border:0;
+	font-family: Fontawesome;
+	content: '\f104';
+	@include font-size(50px);
+	color: #000;
+}
+.mfp-arrow-right:after {
+	content: '\f105';
+}
 footer {
 	background-color: #222222;
 	padding: 30px 0;
@@ -218,13 +235,15 @@ footer {
 }
 
 .footer_list li a {
+	padding: 0;
+	margin: 0;
 	color:#b2b2b2;
-	display: inline-block;
+	display: block;
 	border-radius: 50%;
 	@include font-size(18px);
-	width: 32px;
-	height: 33px;
-	line-height: 28px;
+	width: 36px;
+	height: 36px;
+	line-height: 1.750;
 	text-align: center;
 	border:2px solid #b2b2b2;
 	@include trans;
@@ -232,17 +251,11 @@ footer {
 .footer_list li a:hover {
 	color: darken(#b2b2b2, 10% );
 }
-
-
-
-
-
-
-
-
-
-
-
+.footer_list li a .fa {
+padding: 0;
+margin: 0;
+color:red;
+}
 .mfp-with-zoom .mfp-container,
 .mfp-with-zoom.mfp-bg {
 	opacity: 0;
@@ -266,26 +279,83 @@ footer {
 	opacity: 0;
 }
 
+/* стили формы обратной связи */
 
-.mfp-arrow-left:before {
-	margin-left: 25px;
-	border-right: 27px solid #3F3F3F;
+.forms-call {
+	width: 100%;
+	margin: 0 auto;
+	padding: 0;
+	border: 0;
+	display: flex;
+	justify-content: space-between;
+	overflow: hidden;
+	flex-wrap: wrap;
 }
-.mfp-arrow-left:after {
-	border-right: 17px solid #FFF;
-	margin-left: 31px;
+.forms-call_items {
+	width: 48%;
 }
-.mfp-arrow-right:before {
-	border-left: 27px solid #3F3F3F;
+.forms-call_buttons,
+.forms-call_items:nth-child(3) {
+	width: 100%;
+	margin-bottom: 30px;
 }
-.mfp-arrow-right:after {
-	border-left: 17px solid #FFF;
-	margin-left: 39px;
+.form_fon_title {
+	color: #fff;
+	text-align: center;
+	@include font-size(25px);
+}
+.form_fon_title span {
+	text-transform: uppercase;
+	color: $color_button ;
 }
 
+.forms-call label{
+	margin:10px 0 8px 0;
+	display:block;
+	@include fontsize-lineheight(24, 14);
+}
+.forms-call input {
+	height: 40px;
+	width: 100%;
+	line-height: 40px;
+	border:2px solid #999999;
+	text-indent: 10px;
+	@include fontsize-lineheight(24, 14);
+}
+.forms-call textarea {
+	width: 100%;
+	height: 160px;
+	border:2px solid #999999;
+	padding-top: 10px;
+	text-indent: 10px;
+	@include fontsize-lineheight(24, 14);
+	resize:none;
+}
+.forms-call_buttons {
+	text-align: right;
+}
 
+.call_buttons {
+	padding: 10px 60px;
+	display:inline-block;
+	background-color: $color_cycle;
+	color: #fff;
+	cursor: pointer;
+	font-size: 1.2rem;
+	text-align: center;
+	outline: 0;
+	border: 0;
+	cursor: pointer;
+	@include trans;
+}
 
+.submit:hover {
+	background-color: darken($color_cycle, 0.4);
+}
 
-
+:focus::-webkit-input-placeholder {color: transparent}
+:focus::-moz-placeholder          {color: transparent}
+:focus:-moz-placeholder           {color: transparent}
+:focus:-ms-input-placeholder      {color: transparent}
 
 
