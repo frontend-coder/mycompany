@@ -49,7 +49,7 @@ var iconfontCss = require('gulp-iconfont-css');
 var runTimestamp = Math.round(Date.now()/1000);
 
 // переменая которая контролирует создание (true) или отключение (false) карты кода в файле
-var isDevelopmant     = true;
+var isDevelopmant     = false;
 
 gulp.task('serve', done => {
     browserSync.init({
@@ -147,6 +147,17 @@ gulp.task('rsync', function() {
 });
 
 // npm install --save-dev gulp-ftp vinyl-ftp
+
+// http://cp95210.tmweb.ru/
+//Логин: cp95210
+//Пароль: fSYVwxv8RRts
+//ftp://vh170.timeweb.ru
+
+
+
+
+
+
 //FTP: ftp://vh146.timeweb.ru
 //Логин: cc63120
 //Пароль: j7X4Y36Od5Zm
@@ -205,7 +216,7 @@ function movejs() {
 }
 function movecss() {
     return gulp.src('app/css/main.min.css')
-    .pipe(cleancss( {level: { 2: { specialComments: 0 } } })) // Opt., comment out when debugging
+ //   .pipe(cleancss( {level: { 2: { specialComments: 0 } } })) // Opt., comment out when debugging
          .pipe(gulp.dest('dist/css'))
          .pipe(filesize()).on('error', gulpUtil.log);
 }

@@ -1,3 +1,4 @@
+
 $(document).ready(function () {
 	// 	$("body").niceScroll({
 	// horizrailenabled:false
@@ -15,18 +16,15 @@ $(document).ready(function () {
 		$('.hidden-mnu').hide("slow");
 	});
 // pagination on lending pages
-$(".top_line_menu ul li a, .hidden_mnu ul li a").mPageScroll2id({
+$(".top_line_menu ul li a, .hidden-mnu ul li a").mPageScroll2id({
 layout                 : "auto",
-offset                 : ".top_line_box",
+offset                 : ".top_line",
 scrollEasing           : "ease",
 highlightByNextTarget  : true,
 keepHighlightUntilNext : true,
 autoScrollSpeed        : true,
 scrollSpeed            : 3000
 });
-
-
-
 
 $('#adwise_carousel').owlCarousel({
 	items                : 1,
@@ -45,28 +43,10 @@ $('#adwise_carousel').owlCarousel({
 });
 
 
-$(window).scroll(function(){
-	console.log($(window).scrollTop());
- //   if($(window).scrollTop() > 400 && $(window).scrollTop() < 450)
-if($(window).scrollTop() > 600 )
-    { $(".top_line").addClass("active");
-$(".top_line_box").addClass("top_line_box_active");
-    } else {
-       $(".top_line").removeClass("active");
-       $(".top_line_box").removeClass("top_line_box_active");
-    }
-
-});
-
-
-
-
-
-
-
 $(".our_portfolio_wrap").magnificPopup({
    delegate: 'a', // the selector for gallery item
     type: 'image',
+    fixedContentPos: false,
     fixedBgPos:false,
 removalDelay:400,
     tClose: 'Закрыть (Esc)',
@@ -107,13 +87,6 @@ removalDelay:400,
 		return false;
 	});
 	//castom code
-
-
-
-
-
-
-
 
 
 });
