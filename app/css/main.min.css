@@ -4190,7 +4190,7 @@ body input:required:valid, body textarea:required:valid {
 }
 
 .header_img {
-  background: #000 url("/img/header-fon.jpg") center center no-repeat;
+  background: #000 url("../img/header-fon.jpg") center center no-repeat;
   min-height: 770px;
   -webkit-background-size: cover;
           background-size: cover;

@@ -162,12 +162,12 @@ header */
 
 }
 .our_portfolio_items img {
-display: block;
-width: 100%;
-height: auto;
-padding: 0;
-margin: 0;
-	}
+	display: block;
+	width: 100%;
+	height: auto;
+	padding: 0;
+	margin: 0;
+}
 
 .our_portfolio_items:nth-child(4n+4) {
 	margin-right: 0;
@@ -263,9 +263,9 @@ footer {
 	color: darken(#b2b2b2, 10% );
 }
 .footer_list li a .fa {
-padding: 0;
-margin: 0;
-color:red;
+	padding: 0;
+	margin: 0;
+	color:red;
 }
 .mfp-with-zoom .mfp-container,
 .mfp-with-zoom.mfp-bg {

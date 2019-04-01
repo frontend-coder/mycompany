@@ -155,18 +155,11 @@ gulp.task('rsync', function() {
 
 
 
-
-
-
-//FTP: ftp://vh146.timeweb.ru
-//Логин: cc63120
-//Пароль: j7X4Y36Od5Zm
-// http://ck36182.tmweb.ru/ тестовый домен
 gulp.task( 'ftp', function () {
     var conn = vinyFTP.create( {
-     host:     'vh182.timeweb.ru',
-     user:     'ck36182',
-     password: 'mfZjOftRYnzm',
+     host:     'vh170.timeweb.ru',
+     user:     'cp95210',
+     password: 'fSYVwxv8RRts',
      parallel: 10,
      log:      gulpUtil.log
     } );
@@ -196,13 +189,17 @@ return del('dist/*');
 
 function movefile() {
 	return gulp.src('app/*.html')
-       .pipe(critical({base: 'dist/',
-            inline: true,
-             css: 'app/css/main.min.css'}))
-        .on('error', function(err) { gulpUtil.log(gulpUtil.colors.red(err.message)); })
+       // .pipe(critical({base: 'dist/',
+       //      inline: true,
+       //       css: 'app/css/main.min.css'}))
+       //  .on('error', function(err) { gulpUtil.log(gulpUtil.colors.red(err.message)); })
 	 .pipe(gulp.dest('dist'));
 }
 
+function movefonts() {
+	return gulp.src('app/fonts/**/*')
+	 .pipe(gulp.dest('dist/fonts'));
+}
 function movefilother() {
     return gulp.src('app/*.{php,access}')
      .pipe(gulp.dest('dist'));
@@ -255,9 +252,9 @@ gulp.task('movefilother', movefilother);
 gulp.task('movejs', movejs);
 gulp.task('movecss', movecss);
 gulp.task('moveimages', gulp.series(moveimages));
+gulp.task('movefonts', gulp.series(movefonts));
 
-
-gulp.task('build', gulp.series('cleanbuild', gulp.parallel('movefile', 'movefilother', 'movejs', 'movecss', 'moveimages' )));
+gulp.task('build', gulp.series('cleanbuild', gulp.parallel('movefonts', 'movefile', 'movefilother', 'movejs', 'movecss', 'moveimages' )));
 
 // task для создания спрайтов png
 
