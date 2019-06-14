@@ -49,7 +49,7 @@ var iconfontCss = require('gulp-iconfont-css');
 var runTimestamp = Math.round(Date.now()/1000);
 
 // переменая которая контролирует создание (true) или отключение (false) карты кода в файле
-var isDevelopmant     = false;
+var isDevelopmant     = true;
 
 gulp.task('serve', done => {
     browserSync.init({
