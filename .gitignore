@@ -1,6 +1,6 @@
 /node_modules/
 /dist/
-/dist/libs/plagins/
+/app/libs/plagins/
 /.git/
 /**/*.psd
 /**/Thumbs.db
