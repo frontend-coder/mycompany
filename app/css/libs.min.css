@@ -8241,7 +8241,7 @@ body input:required:valid, body textarea:required:valid {
   z-index: 9999999;
 }
 
-.active {
+.activate {
   background-color: #111111;
   width: 100%;
   position: fixed;
@@ -8772,25 +8772,6 @@ h3.adwice_name span {
   padding-bottom: 50px;
 }
 
-#our_adwice .owl-theme .owl-dots .owl-dot span {
-  display: none;
-}
-
-#our_adwice .owl-theme .owl-dots .owl-dot {
-  width: 7px;
-  height: 7px;
-  margin: 5px 7px;
-  background: #b2b2b2;
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-
-#our_adwice .owl-theme .owl-dots .owl-dot:hover,
-#our_adwice .owl-theme .owl-dots .active {
-  background: #fb9613;
-}
-
 .mfp-arrow-left:before,
 .mfp-arrow-left:after,
 .mfp-arrow-right:after,
@@ -8985,6 +8966,27 @@ footer {
 
 :focus:-ms-input-placeholder {
   color: transparent;
+}
+
+#adwice .owl-theme .owl-dots button.owl-dot span {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  display: block;
+  margin: 5px 7px;
+  background: #b2b2b2;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+#adwice .owl-theme .owl-dots button.owl-dot span:hover,
+#adwice .owl-theme .owl-dots button.active span {
+  background: #fb9613;
+}
+
+.owl-theme .owl-dots .owl-dot.active span {
+  background-color: #fb9613;
 }
 
 /*==========  Desktop First  ==========*/

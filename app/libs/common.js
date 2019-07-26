@@ -17,16 +17,16 @@ $('#adwise_carousel').owlCarousel({
 	items                : 1,
 	loop                 : true,
 	margin               : 30,
-	slideSpeed           : 2500,
+	//slideSpeed           : 2500,
 	//	autoplay          : true,
 	autoplayTimeout      : 3500,
 	nav                  : false,
-	dragBeforeAnimFinish : true,
-	mouseDrag            : true,
-	touchDrag            : true,
-	stagePadding         : 30,
-	stopOnHover          : false,
-	dots                 : true
+//	dragBeforeAnimFinish : true,
+//	mouseDrag            : true,
+//	touchDrag            : true,
+//	stagePadding         : 30,
+//	stopOnHover          : false,
+//	dots                 : true
 });
 
 
