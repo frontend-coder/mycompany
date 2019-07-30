@@ -1,4 +1,3 @@
-
 .header_img {
  background: #000 url('../img/header-fon.jpg') center center no-repeat;
  min-height:770px;
@@ -15,24 +14,20 @@
   background-color: rgba(#111, 0.42);
 }
 
-
-
 .top_line {
-  background-color: #000;
+ background-color: #000;
 position: sticky; /* Липкое позиционирование */
 top: 0; /* Положение сверху */
-// width: 100%;
-//  height: 100px;
- //  @include transition(background-color, 1.8s, ease, 0.1s);
  transition: background-color 1s ease-in-out 0s;
  z-index: 9999999;
-
 }
+
 .activate {
  background-color: rgba(#111, 1.0);
  width: 100%;
  position: fixed;
 }
+
 .top_line_box {
   display: flex;
   position: relative;
@@ -40,6 +35,7 @@ top: 0; /* Положение сверху */
   align-items: center;
   justify-content: space-between;
 }
+
 .top_line_box_active {
   height: 70px;
 }
@@ -50,15 +46,25 @@ top: 0; /* Положение сверху */
  font-family: "OpenSansSemiBold", sans-serif;
  color: #fff;
 }
-.f-nav{ z-index: 9999; position: fixed; left: 0; top: 0; width: 100%;}
+
+.f-nav{
+ z-index: 9999;
+ position: fixed;
+ left: 0;
+ top: 0;
+ width: 100%;
+}
+
 .top_line_menu {
   padding: 0;
   margin: 0;
 }
+
 .top_line_menu ul li {
   display: inline-block;
   padding: 0 10px;
 }
+
 .top_line_menu ul li a {
   display: block;
   text-transform: uppercase;
@@ -74,6 +80,10 @@ top: 0; /* Положение сверху */
   color: $color_cycle;
 }
 
+.top_line_menu a.mPS2id-highlight {
+  color: $color_cycle;
+}
+
 .top_line_menu ul li a:hover:before {
   position: absolute;
   bottom:0;
@@ -85,24 +95,14 @@ top: 0; /* Положение сверху */
   animation: clipMe 0.75s linear;
 }
 
-
 @keyframes clipMe {
   0% {
    width:0;
  }
-
  100% {
   width: 100%;
 }
 }
-
-
-
-
-
-
-
-
 
 /*  оформление мобильной версии меню и гамбургера */
 .mobile_gamburger {
@@ -124,6 +124,7 @@ right:10px;top:0; */
 text-align:center;
 line-height:48px;
 }
+
 .toggle-mnu{
   display:block;
   width:36px;
@@ -131,19 +132,23 @@ line-height:48px;
   margin-top:15px;
   margin-right: 0;
 }
+
 .toggle-mnu span:after, .toggle-mnu span:before {
   content:"";
   position:absolute;
   left:0;
   top:9px;
 }
+
 .toggle-mnu span:after {
   top:18px;
 }
+
 .toggle-mnu span{
   position:relative;
   display:block;
 }
+
 .toggle-mnu span,.toggle-mnu span:after,.toggle-mnu span:before {
   width:100%;
   height:3px;
@@ -152,14 +157,17 @@ line-height:48px;
   backface-visibility:hidden;
   border-radius:3px;
 }
+
 .toggle-mnu.on span {
   background-color:transparent;
 }
+
 .toggle-mnu.on span:before {
   -webkit-transform:rotate(45deg) translate(-1px,0);
   -ms-transform:rotate(45deg) translate(-1px,0);
   transform:rotate(45deg) translate(-1px,0);
 }
+
 .toggle-mnu.on span:after {
   -webkit-transform:rotate(-45deg) translate(6px,-7px);
   -ms-transform:rotate(-45deg) translate(6px,-7px);
@@ -170,8 +178,6 @@ line-height:48px;
   opacity:1;visibility:visible;
 }
 
-
-
 /*оформление скрытого меню*/
 .hidden-mnu {
   background-color: rgba(#000, .7);
@@ -181,16 +187,20 @@ line-height:48px;
   left:0;
   top: 0;
   z-index:1;
+  height: 100vh;
 }
+
 .hidden-mnu ul {
   margin: 0;
   padding: 0;
 }
+
 .hidden-mnu ul li {
   display:block;
   margin: 0;
   padding: 0;
 }
+
 .hidden-mnu ul li a{
   display: block;
   cursor: pointer;
@@ -207,20 +217,8 @@ line-height:48px;
 .hidden-mnu ul li a:hover{
   /* background-color:rgba(40, 40, 38, 0.60); */
   color:$color_button;
-
 }
-
-
-
-
-
-
-
-
-
-/*
-стили оформления контента в хедере
-*/
+/* стили оформления контента в хедере */
 
 .header_row {
   display: flex;
@@ -256,6 +254,4 @@ line-height:48px;
 }
 .header_content p span {
   font-family: "OpenSansBold", sans-serif;
-
 }
-

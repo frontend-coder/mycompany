@@ -51,8 +51,7 @@ gulp.task('styles', () => {
 
 gulp.task('scripts', done => {
 	var jsFiles = [
-	'app/libs/plagins/jquery/jquery.min.js',
-//'app/libs/plagins/nicescroll/jquery.nicescroll.min.js',
+'app/libs/plagins/jquery/query-1.12.4.min.js',
 'app/libs/plagins/jquery.PageScroll2id/jquery.PageScroll2id.min.js',
 'app/libs/plagins/magnific-popup/jquery.magnific-popup.min.js',
 'app/libs/plagins/owlcarousel/owl.carousel.min.js',
