@@ -68,6 +68,7 @@ top: 0; /* Положение сверху */
 .top_line_menu ul li a {
   display: block;
   text-transform: uppercase;
+  text-decoration: none;
   color: #fff;
   padding: 10px 0;
   @include font-size(14px);
@@ -83,7 +84,7 @@ top: 0; /* Положение сверху */
 .top_line_menu a.mPS2id-highlight {
   color: $color_cycle;
 }
-
+.top_line_menu a.mPS2id-highlight:before,
 .top_line_menu ul li a:hover:before {
   position: absolute;
   bottom:0;

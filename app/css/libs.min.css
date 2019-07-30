@@ -8297,6 +8297,7 @@ body input:required:valid, body textarea:required:valid {
 .top_line_menu ul li a {
   display: block;
   text-transform: uppercase;
+  text-decoration: none;
   color: #fff;
   padding: 10px 0;
   font-size: 0.875rem;
@@ -8315,6 +8316,7 @@ body input:required:valid, body textarea:required:valid {
   color: #fcac45;
 }
 
+.top_line_menu a.mPS2id-highlight:before,
 .top_line_menu ul li a:hover:before {
   position: absolute;
   bottom: 0;
